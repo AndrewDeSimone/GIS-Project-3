@@ -76,3 +76,4 @@ searchFrame.pack()
 
 window.mainloop()
 #create shapefile
+colleges[colleges['NAME'].isin(schools)].to_file(path+'/map.shp')
