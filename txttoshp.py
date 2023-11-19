@@ -4,7 +4,10 @@ print("What is the folder Path: ", end='')
 
 path = input()
 
-schools = open(path+'/schools.txt', 'r').read().split('\n')
+schools = set(open(path+'/schools.txt', 'r').read().split('\n'))
+
+if "" in schools:
+    schools.remove("")
 
 colleges = pd.read_file('collegedata/CollegesUniversities.shp')
 
